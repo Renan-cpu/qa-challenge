@@ -2,12 +2,12 @@
 
 describe('challenge test switch', () => {
   beforeEach(function(){
+    cy.visit('https://qastage.buildbox.one/18/cadastro/') 
+    cy.get('button[name="btn-enroll"]').click()
     
 })
 
   it.only('Cadastro com dados válidos',() =>{
-    cy.visit('https://qastage.buildbox.one/18/cadastro/') 
-    cy.get('button[name="btn-enroll"]').click()
     cy.get('input[id="signup-personal-data-firstName"]').type('Renan')
     cy.get('input[id="signup-personal-data-lastName"]').type('Ramos Barbosa')
     cy.get('input[id="signup-personal-data-birthDate"]').type('24112000')
